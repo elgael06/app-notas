@@ -16,7 +16,7 @@ interface iNota {
   titulo: "";
   descripcion: "";
 }
-let listaNotas: Array<iNota>;
+let listaNotas: iNota[];
 
 const App: React.FC = () => {
   //const [dato, setDato] = useState("");
@@ -25,21 +25,21 @@ const App: React.FC = () => {
 
   const guardarrNota = (nota: iNota) => {
     console.log("Guardar...");
-    const respaldo = Lista.map(e => e);
+    const respaldo:iNota[] = Lista.map((e:iNota) => e);
     respaldo.push(nota);
     setLista(respaldo);
     console.log(Lista);
   };
-  const agregarNota = (nueva: any) => {
+  const agregarNota = () => {
     console.log("Agregar...");
     const el: HTMLElement =
       document.getElementById("#agregarNota") || document.body;
     el.style.display = "flex";
     setShowAlert1(true);
   };
-  const borrarNota = (id: number) => {
+  const borrarNota = (id: Number) => {
     console.log("Borrar !!!");
-    const lista = Lista.filter((e, i) => i != id);
+    const lista = Lista.filter((e:iNota, i:Number) => i != id);
     setLista(lista);
   };
   return (
@@ -57,7 +57,7 @@ const App: React.FC = () => {
           Agregar <IonIcon name="add-circle" />{" "}
         </IonButton>
         <IonCardTitle style={{ marginTop: "30px" }}>Lista Notas</IonCardTitle>
-        <LisataTareas />
+        <LisataTareas  tareas={Lista} />
       </IonContent>
       <IonButton>Listo</IonButton>
       <IonAlert
