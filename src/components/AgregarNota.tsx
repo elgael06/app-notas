@@ -1,4 +1,4 @@
-import React, { useState, EventHandler } from "react";
+import React, { useState, SyntheticEvent  } from "react";
 import { IonContent, IonModal, IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonNote, IonItem, IonLabel, IonInput, IonTextarea } from "@ionic/react";
 
 import iNota from '../interface/iNota'
@@ -39,7 +39,7 @@ const AgregarNota =(props:agregar)=>{
             <IonContent fullscreen>
             <IonItem>
                 <IonLabel position="stacked">Titilo</IonLabel>
-                <IonInput  required type="text"  value={titulo}  onChange={(e: React.ChangeEvent<HTMLInputElement>):void=>setTitutlo(e.target.value || "")} ></IonInput>
+                <IonInput  required type="text"  value={titulo}  onChange={(e: SyntheticEvent ):void=>setTitutlo(e.target.value || "")} ></IonInput>
             </IonItem>
             <IonItem>
                 <IonLabel position="stacked">Descripcion</IonLabel>
