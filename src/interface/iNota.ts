@@ -1,5 +1,5 @@
 
 export default interface iNota {
-    titulo: "";
-    descripcion: "";
+    titulo:string;
+    descripcion: string;
   }

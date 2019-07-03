@@ -1,30 +1,39 @@
-import React, { useState, SyntheticEvent  } from "react";
-import { IonContent, IonModal, IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonNote, IonItem, IonLabel, IonInput, IonTextarea } from "@ionic/react";
+import React, { useState } from "react";
+import { IonContent,
+   IonModal,
+   IonHeader,
+   IonToolbar,
+   IonTitle,
+   IonButtons,
+   IonButton,
+   IonItem,
+   IonLabel,
+   IonInput,
+   IonTextarea } from "@ionic/react";
 
-import iNota from '../interface/iNota'
+import iNota from '../interface/iNota';
 
 type agregar ={setEstatus:(estatus:boolean)=>void, estatus:boolean,guardar:(nota:iNota)=>void }
-let nota : iNota= {
-  descripcion:"",
-  titulo:"",
-}
+
+const titleProps:string="";
+const descriptionProps:string="";
 
 const AgregarNota =(props:agregar)=>{
     let {setEstatus,estatus,guardar} = props;
-    const [nueva ,setNueva] = useState(nota)
-    const [titulo,setTitutlo]=useState(nota.titulo)
-    const [descripcion,setDescripcion]=useState(nota.descripcion)
+    const [titulo,setTitutlo]=useState(titleProps)
+    const [descripcion,setDescripcion]=useState(descriptionProps)
 
   const checarGuardar=():void=>{
       let notaR:iNota= {
-        descripcion:"",
-        titulo:"",
+        descripcion:descripcion,
+        titulo:titulo,
       }
-     notaR.titulo = titulo;
-     notaR.descripcion = descripcion;
-     guardar(notaR);
+      descripcion!=="" && titulo!==""?function(){
+     guardar(notaR)
+    setDescripcion("");
+    setTitutlo("");
+    }():window.alert("Fatan Parametros...");
   }
-
     return(
         <IonContent >
             <IonModal isOpen={estatus}>
@@ -39,14 +48,17 @@ const AgregarNota =(props:agregar)=>{
             <IonContent fullscreen>
             <IonItem>
                 <IonLabel position="stacked">Titilo</IonLabel>
-                <IonInput  required type="text"  value={titulo}  onChange={(e: SyntheticEvent ):void=>setTitutlo(e.target.value || "")} ></IonInput>
+                <IonInput required type="text"  value={titulo}  
+                onIonChange={(e:any)=>setTitutlo(e.target.value)} > </IonInput>
             </IonItem>
             <IonItem>
                 <IonLabel position="stacked">Descripcion</IonLabel>
-                <IonTextarea rows={6} cols={20}    value={descripcion}   onChange={(e:Event)=>setDescripcion(e.target.value|| "")}></IonTextarea>
+                <IonTextarea rows={6} cols={20} value={descripcion} 
+                onIonChange={(e:any)=>setDescripcion(e.target.value)}>
+                  </IonTextarea>
             </IonItem>
-            <IonButton color="success" onClick={checarGuardar}>Guardar</IonButton>
             </IonContent>
+            <IonButton color="success" onClick={checarGuardar}>Guardar</IonButton>
             </IonModal>
         </IonContent>
     );

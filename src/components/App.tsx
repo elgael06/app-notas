@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import {
   IonApp,
-  IonButton,
   IonHeader,
   IonTitle,
   IonToolbar,
   IonContent,
   IonIcon,
-  IonCardTitle,
-  IonAlert
+  IonAlert,
+  IonFab,
+  IonFabButton
 } from "@ionic/react";
 import LisataTareas from "./LisataTareas";
-import iNota from '../interface/iNota'
-import AgregarNota from './AgregarNota'
+import iNota from '../interface/iNota';
+import AgregarNota from './AgregarNota';
 
 let listaNotas: Array<iNota>=[];
 
@@ -27,15 +27,7 @@ const App: React.FC = () => {
     let respaldo = Lista.map(e => e) ;
     respaldo.push(nota);
     setLista(respaldo);
-    console.log(Lista);
     setVistaModal(false)
-  };
-  const agregarNota = () => {
-    console.log("Agregar...");
-    const el: HTMLElement =
-      document.getElementById("#agregarNota") || document.body;
-    el.style.display = "flex";
-    setShowAlert1(true);
   };
   const borrarNota = (id: Number) => {
     console.log("Borrar !!!");
@@ -44,25 +36,22 @@ const App: React.FC = () => {
   };
   return (
     <IonApp>
-      <IonHeader>
+      <IonContent>
+      <IonHeader slot="fixed">
         <IonToolbar color="primary">
           <IonTitle style={{ textAlign: "center", fontSize: "21px" }}>
             Aplicacion De Notas
           </IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
-        <IonButton color="success" style={{ float: "right " }} onClick={()=>setVistaModal(true)}>
-          {" "}
-          Agregar <IonIcon name="add-circle" />{" "}
-        </IonButton>
-        <IonCardTitle style={{ marginTop: "30px" }}>Lista Notas</IonCardTitle>
-        <LisataTareas  notas={Lista} borrarNota={borrarNota}   />
-      </IonContent>
-      <IonButton>Listo</IonButton>
-
+      
+      <LisataTareas  notas={Lista} borrarNota={borrarNota}   />
       <AgregarNota estatus={vistaModal} setEstatus={setVistaModal} guardar={guardarrNota} />
-
+      <IonFab vertical="bottom" horizontal="end" slot="fixed" onClick={()=>setVistaModal(true)}>
+        <IonFabButton  color="primary">
+          <IonIcon name="add" />
+        </IonFabButton>
+      </IonFab>
       <IonAlert
         isOpen={showAlert1}
         onDidDismiss={() => setShowAlert1(false)}
@@ -86,6 +75,7 @@ const App: React.FC = () => {
           }
         ]}
       />
+      </IonContent>
     </IonApp>
   );
 };
