@@ -9,7 +9,8 @@ import { IonContent,
    IonItem,
    IonLabel,
    IonInput,
-   IonTextarea } from "@ionic/react";
+   IonTextarea, 
+   IonAlert} from "@ionic/react";
 
 import iNota from '../interface/iNota';
 
@@ -21,7 +22,8 @@ const descriptionProps:string="";
 const AgregarNota =(props:agregar)=>{
     let {setEstatus,estatus,guardar} = props;
     const [titulo,setTitutlo]=useState(titleProps)
-    const [descripcion,setDescripcion]=useState(descriptionProps)
+    const [descripcion,setDescripcion]=useState(descriptionProps);
+    const [showAlert1, setShowAlert1] = useState(false);
 
   const checarGuardar=():void=>{
       let notaR:iNota= {
@@ -32,7 +34,7 @@ const AgregarNota =(props:agregar)=>{
      guardar(notaR)
     setDescripcion("");
     setTitutlo("");
-    }():window.alert("Fatan Parametros...");
+    }():setShowAlert1(true);
   }
     return(
         <IonContent >
@@ -53,13 +55,26 @@ const AgregarNota =(props:agregar)=>{
             </IonItem>
             <IonItem>
                 <IonLabel position="stacked">Descripcion</IonLabel>
-                <IonTextarea rows={6} cols={20} value={descripcion} 
+                <IonTextarea rows={6} cols={20} value={descripcion}  auto-grow={true}
                 onIonChange={(e:any)=>setDescripcion(e.target.value)}>
                   </IonTextarea>
             </IonItem>
             </IonContent>
             <IonButton color="success" onClick={checarGuardar}>Guardar</IonButton>
             </IonModal>
+            <IonAlert
+          isOpen={showAlert1}
+          onDidDismiss={() => setShowAlert1(false)}
+          header={"Alerta"}
+          message={"-Faltan Parametros !!!"}
+          buttons={[
+            {
+              text: "Aceptar",
+              cssClass: "primary",
+              handler:()=>setShowAlert1(false)
+            }
+          ]}
+      />
         </IonContent>
     );
 }
