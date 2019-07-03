@@ -11,24 +11,24 @@ import {
   IonAlert
 } from "@ionic/react";
 import LisataTareas from "./LisataTareas";
+import iNota from '../interface/iNota'
+import AgregarNota from './AgregarNota'
 
-interface iNota {
-  titulo: "";
-  descripcion: "";
-}
-let listaNotas: iNota[];
+let listaNotas: Array<iNota>=[];
 
 const App: React.FC = () => {
   //const [dato, setDato] = useState("");
   const [Lista, setLista] = useState(listaNotas);
   const [showAlert1, setShowAlert1] = useState(false);
+  const [vistaModal,setVistaModal] = useState(false)
 
   const guardarrNota = (nota: iNota) => {
     console.log("Guardar...");
-    const respaldo:iNota[] = Lista.map((e:iNota) => e);
+    let respaldo = Lista.map(e => e) ;
     respaldo.push(nota);
     setLista(respaldo);
     console.log(Lista);
+    setVistaModal(false)
   };
   const agregarNota = () => {
     console.log("Agregar...");
@@ -39,7 +39,7 @@ const App: React.FC = () => {
   };
   const borrarNota = (id: Number) => {
     console.log("Borrar !!!");
-    const lista = Lista.filter((e:iNota, i:Number) => i != id);
+    const lista = Lista.filter((e:iNota, i:Number) => i !== id);
     setLista(lista);
   };
   return (
@@ -52,14 +52,17 @@ const App: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonButton style={{ float: "right " }} onClick={agregarNota}>
+        <IonButton color="success" style={{ float: "right " }} onClick={()=>setVistaModal(true)}>
           {" "}
           Agregar <IonIcon name="add-circle" />{" "}
         </IonButton>
         <IonCardTitle style={{ marginTop: "30px" }}>Lista Notas</IonCardTitle>
-        <LisataTareas  tareas={Lista} />
+        <LisataTareas  notas={Lista} borrarNota={borrarNota}   />
       </IonContent>
       <IonButton>Listo</IonButton>
+
+      <AgregarNota estatus={vistaModal} setEstatus={setVistaModal} guardar={guardarrNota} />
+
       <IonAlert
         isOpen={showAlert1}
         onDidDismiss={() => setShowAlert1(false)}

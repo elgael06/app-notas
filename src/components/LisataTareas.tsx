@@ -1,16 +1,35 @@
-import React, { useState } from "react";
-import { IonContent } from "@ionic/react";
-interface iNota {
-    titulo: "";
-    descripcion: "";
-  }
-  let listaNotas: Array<iNota>;
-interface itareas { tareas: iNota[] }
+import React  from "react";
+import { IonContent,IonCard,IonCardTitle,IonList } from "@ionic/react";
 
-const LisataTareas: React.FC=(props :itareas)=>{
-    let {tareas} = props;
-return (<IonContent >
-    listo
+import iNota from '../interface/iNota'
+import Nota from './Nota'
+
+type  iListaTareas  = {  notas :  iNota[],borrarNota:(id: Number)=>void }
+
+const LisataTareas = ( props:iListaTareas)=>{
+let {notas,borrarNota} = props;
+return (<IonContent  style={{
+    height: "490px",
+    overflowY: "auto",
+    width: "100%"
+  }}>
+    {notas ? (
+        <IonList  style={{ padding: "20px" }}>
+          {notas.map((e, i) => (
+            <Nota nota={e} borrarNota={() => borrarNota(i)} />
+          ))}
+        </IonList>
+      ) : (
+        <IonCard
+          color="warning "
+          style={{
+            padding: "20px",
+            marginTop: "20px"
+          }}
+        >
+          <IonCardTitle>Sin Notas A Mostrar</IonCardTitle>
+        </IonCard>
+      )}
 </IonContent>)
 }
 
