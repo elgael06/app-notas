@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^1.1.0",
+    "@capacitor/core": "1.1.0",
     "@ionic/core": "^4.6.0",
     "@ionic/react": "0.0.6-3",
     "@types/jest": "24.0.15",
@@ -19,9 +21,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npx cap add android && npx cap copy",
+    "build-server":"react-scripts build && serve -s build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "android":"npx cap add android",
+    "electron":"npx cap add electron",
+    "open-android":"npx cap open android",    
+    "electron-android":"npx cap open electron"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@capacitor/cli": "1.1.0",
     "@types/react": "^16.8.22"
   }
 }

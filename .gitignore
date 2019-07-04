@@ -11,6 +11,10 @@
 # production
 /build
 
+# Exports
+/android
+/electron
+
 # misc
 .DS_Store
 .env.local
