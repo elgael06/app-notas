@@ -11,8 +11,6 @@ import { IonContent,
    IonInput,
    IonTextarea,
    IonIcon,
-   IonFooter,
-   IonFab
 } from "@ionic/react";
 type agregar ={setEstatus:(estatus:boolean)=>void, estatus:boolean,titulo:String,descripcion:String,ConfirmarBorrado:()=>void }
 

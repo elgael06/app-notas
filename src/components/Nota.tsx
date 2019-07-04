@@ -1,5 +1,5 @@
-import { IonContent,IonCardTitle, IonItem,  IonFab, IonIcon, IonButton, IonFabList } from "@ionic/react";
-import React  from "react";
+import { IonContent,IonCardTitle, IonItem,  IonFab, IonIcon, IonActionSheet } from "@ionic/react";
+import React, { useState }  from "react";
 import iNota from '../interface/iNota'
 
 type  iItem  = {  nota :  iNota,borrarNota:(id: Number)=>void ,id:Number  ,verNota:(seleccion:iNota,id:Number)=>void }
@@ -7,22 +7,49 @@ type  iItem  = {  nota :  iNota,borrarNota:(id: Number)=>void ,id:Number  ,verNo
 
 const Nota =(props:iItem)=>{
     let { nota, borrarNota,id,verNota} =props;
+    const [showActionSheet,  setShowActionSheet] = useState(false)
 
 return (
     <IonItem>
-        <IonIcon name="list" />
+        <IonIcon name="list-box" />
         <IonCardTitle>{nota.titulo}</IonCardTitle>
         <IonContent>
             <IonFab  vertical="bottom" horizontal="end" slot="fixed">
-                <IonButton >
-                    <IonIcon name="settings" />
-                </IonButton>
-                <IonFabList side="start">
-                    <IonButton  color="danger" onClick={()=>borrarNota(id)}><IonIcon name="trash" /></IonButton>
-                    <IonButton color="warning"  onClick={()=> verNota(nota,id)} ><IonIcon name="eye" /></IonButton>
-                    <IonButton color="secondary" ><IonIcon name="list" /></IonButton>
-                </IonFabList>
+                    <IonIcon name="options"  onClick={()=>setShowActionSheet(true)} />
             </IonFab>
+                <IonActionSheet
+                isOpen={showActionSheet}
+                onDidDismiss={() => setShowActionSheet(false)}
+                buttons={[
+                  {
+                    text: 'Mostrar',
+                    role: 'destructive',
+                    icon: 'eye',
+                    handler: () => {
+                      console.log('Delete clicked');
+                      verNota(nota,id);
+                    }
+                  },                
+                  {
+                    text: 'Editar',
+                    role: 'destructive',
+                    icon: 'list',
+                    handler: () => {
+                      console.log('Editar clicked');
+                    }
+                  },
+                {
+                    text: 'Eliminar',
+                    role: 'destructive',
+                    icon: 'trash',
+                    handler: () => {
+                      console.log('Delete clicked');
+                      borrarNota(id)
+                    }
+                  },]
+                }
+                >
+                </IonActionSheet>
         </IonContent>
     </IonItem>
 )
