@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npx cap add android && npx cap copy",
+    "build": "react-scripts build && npx cap copy",
     "build-server":"react-scripts build && serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
