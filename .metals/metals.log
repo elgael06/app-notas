@@ -1,0 +1,237 @@
+INFO  time: initialize in 0.38s
+WARN  no build tool detected in workspace 'c:\www\Ionic\app-notas'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+INFO  no build target: using presentation compiler with only scala-library
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+Exception in thread "pool-1-thread-10" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1155)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:20)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionCancelChecker.isCancelled(MtagsEnrichments.scala:340)
+	at scala.meta.internal.metals.FormattingProvider.$anonfun$isCancelled$1(FormattingProvider.scala:59)
+	at scala.meta.internal.metals.FormattingProvider.$anonfun$isCancelled$1$adapted(FormattingProvider.scala:59)
+	at scala.Option.exists(Option.scala:257)
+	at scala.meta.internal.metals.FormattingProvider.isCancelled(FormattingProvider.scala:59)
+	at scala.meta.internal.metals.FormattingProvider.$anonfun$handleMissingFile$1(FormattingProvider.scala:171)
+	at scala.meta.internal.metals.FormattingProvider.$anonfun$handleMissingFile$1$adapted(FormattingProvider.scala:164)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	... 2 more
+INFO  shutting down Metals
+INFO  time: initialize in 0.39s
+WARN  no build tool detected in workspace 'c:\www\Ionic\app-notas'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+val d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+INFO  no build target: using presentation compiler with only scala-library
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:13: error: expected class or object definition
+val d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+val d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+Dl d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+D d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+ d = new D 
+ ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+ d:D = new D 
+ ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+ d:D = new D 
+ ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+ val d = new D 
+ ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build tool detected in workspace 'c:\www\Ionic\app-notas'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'c:\www\Ionic\app-notas'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'c:\www\Ionic\app-notas'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace 'c:\www\Ionic\app-notas'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+ def d = new D 
+ ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+  d = new D 
+  ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+  d = new D 
+  ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+val  d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+ d = new D 
+ ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+val d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+val d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+Val d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+def d = new D 
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: objects may not have parameters
+object   d(){
+          ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+def  d(){
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:12: error: expected class or object definition
+def  d(){
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+def  d(){
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: objects may not have parameters
+object   d(){
+          ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: objects may not have parameters
+object   d(){
+          ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:15: error: = expected but new found
+  val d new D 
+        ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:15: error: = expected but new found
+  val d new D 
+        ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:15: error: = expected but new found
+  val d new D 
+        ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+  val d new D 
+  ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+ val d new D 
+ ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:14: error: expected class or object definition
+ val d new D 
+ ^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:21: error: expected class or object definition
+val nums = List(1,2,3,4)
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:21: error: expected class or object definition
+val nums = List(1,2,3,4)
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:3: error: expected class or object definition
+val nums = List(1,2,3,4)
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+ERROR scalafmt: c:\Users\gael\Desktop\Main.scala:3: error: expected class or object definition
+def suma(a:Int,b:Int):Int{
+^
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
+WARN  no build target: c:\Users\gael\Desktop\Main.scala
